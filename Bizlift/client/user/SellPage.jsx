@@ -71,13 +71,17 @@ const SellPage = () => {
       setMessage(err.response?.data?.error || "Error submitting form.");
     }
   };
+const handleLogout = () => {
+    localStorage.removeItem("token");
+    navigate("/login");
+  };
 
   return (
     <div className="sell-layout">
       {/* Sidebar */}
       <aside className="sell-sidebar">
         <div className="sell-logo">
-          <h2>BizLift</h2>
+          
         </div>
 
         <nav className="sell-nav">
@@ -96,6 +100,9 @@ const SellPage = () => {
           <Link className="active" to="/dashboard/sell">
             Sell
           </Link>
+          <button className="logout-btn" onClick={handleLogout}>
+            Logout
+          </button>
         </nav>
       </aside>
 

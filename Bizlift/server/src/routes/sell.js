@@ -30,6 +30,11 @@ router.get("/all", async (req, res) => {
 
 // ✅ POST /sell - Create a new product listing
 router.post("/", upload.single("photo"), async (req, res) => {
+   console.log("📩 /sell route hit");
+  console.log("Headers:", req.headers.authorization);
+  console.log("Body:", req.body);
+  console.log("File:", req.file);
+
   const token = req.headers.authorization?.split(" ")[1];
   if (!token) return res.status(401).json({ error: "No token provided" });
 

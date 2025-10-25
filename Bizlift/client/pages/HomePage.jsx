@@ -47,7 +47,10 @@ const HomePage = () => {
       <section className="hero-section">
         <div className="hero-overlay">
           <h1>Welcome to BizLift</h1>
-          <p>Manage your products, track your revenue, and grow your business easily.</p>
+          <h2>Track, Sell, Legalize, Grow.</h2>
+          <p>Manage your products, track your revenue, and grow your business easily.
+            <br />Easily manage your daily business expenses and income. <br />Track costs, calculate profits, and make data-driven decisions — all in one place.
+          </p>
           <div className="hero-buttons">
             <button onClick={() => navigate("/signup")} className="btn-primary">Seller</button>
             <button onClick={() => navigate("/marketplace")} className="btn-secondary">Buyer</button>
@@ -61,23 +64,23 @@ const HomePage = () => {
         <div className="services-cards">
           <div className="service-card">
             <FaWallet className="service-icon" />
-            <h3>Easy Payments</h3>
-            <p>Track income and revenue effortlessly with automated calculations.</p>
+            <h3>Guidance</h3>
+            <p>We will guide you through yor business starting journey.</p>
           </div>
           <div className="service-card">
             <FaChartLine className="service-icon" />
-            <h3>Analytics</h3>
-            <p>Visualize your sales and revenue trends with charts and graphs.</p>
+            <h3>Cash Book</h3>
+            <p>Track income and revenue effortlessly with automated calculations.</p>
           </div>
           <div className="service-card">
             <FaUsers className="service-icon" />
-            <h3>Multi-User Access</h3>
-            <p>Collaborate with your team and manage products efficiently.</p>
+            <h3>Market Place</h3>
+            <p>This is a place where Sellers can sell thier product and Buyers can purches easily</p>
           </div>
           <div className="service-card">
             <FaTruck className="service-icon" />
-            <h3>Fast Delivery</h3>
-            <p>Buyers get a seamless experience to browse and purchase products.</p>
+            <h3>Smooth user interaction</h3>
+            <p>Our system is easy to use with smooth user interface</p>
           </div>
         </div>
       </section>

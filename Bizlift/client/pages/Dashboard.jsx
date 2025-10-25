@@ -61,12 +61,15 @@ const Dashboard = () => {
           <Link className={location.pathname.includes("/cashbook") ? "active" : ""} to="/dashboard/cashbook">
             Cash Book
           </Link>
-          <Link className={location.pathname.includes("/guidance") ? "active" : ""} to="/guidance">
+          <Link className={location.pathname.includes("/guidance") ? "active" : ""} to="/dashboard/guidance">
             Guidance
           </Link>
           <Link className={location.pathname.includes("/sell") ? "active" : ""} to="/dashboard/sell">
             Sell
           </Link>
+          <button className="logout-btn" onClick={handleLogout}>
+            Logout
+          </button>
         </nav>
       </aside>
 
@@ -75,12 +78,10 @@ const Dashboard = () => {
         {/* Header */}
         <header className="dashboard-header">
           <div>
-            👋 Hello, {user.name || "User"}!
+            👋 Hello, Custommer!
             <div style={{ fontSize: "0.9rem", color: "#666" }}>{user.email}</div>
           </div>
-          <button className="logout-btn" onClick={handleLogout}>
-            Logout
-          </button>
+          
         </header>
 
         {/* Welcome Section */}
@@ -105,7 +106,7 @@ const Dashboard = () => {
               <h4>Business Analysis</h4>
               <p>Visualize sales trends and understand your business performance.</p>
             </Link>
-            <Link to="/guidance" className="service-card">
+            <Link to="/dashboard/guidance" className="service-card">
               <FaLightbulb className="service-icon" />
               <h4>Guidance</h4>
               <p>Learn how to register, get a TIN, and apply for licenses in Ethiopia.</p>

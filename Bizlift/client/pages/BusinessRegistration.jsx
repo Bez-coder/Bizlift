@@ -2,6 +2,11 @@ import React from 'react';
 import './BusinessRegistration.css';
 import { Link, useLocation } from 'react-router-dom';
 
+const handleLogout = () => {
+    localStorage.removeItem("token");
+    navigate("/login");
+  };
+
 const BusinessRegistration = () => {
   const location = useLocation();
 
@@ -17,6 +22,9 @@ const BusinessRegistration = () => {
           <Link className={location.pathname.includes("/cashbook") ? "active" : ""} to="/dashboard/cashbook">Cash Book</Link>
           <Link className={location.pathname.includes("/guidance") ? "active" : ""} to="/guidance">Guidance</Link>
           <Link className={location.pathname.includes("/sell") ? "active" : ""} to="/dashboard/sell">Sell</Link>
+          <button className="logout-btn" onClick={handleLogout}>
+            Logout
+          </button>
         </nav>
       </aside>
 
@@ -33,6 +41,7 @@ const BusinessRegistration = () => {
         <p>For more detailed information, refer to the official guide: <a href="https://developer.chapa.co/business-license-in-ethiopia" target="_blank" rel="noopener noreferrer">How to get a business license in Ethiopia</a></p>
         <p>Download the Business Registration Template: <a href="/templates/business-registration-template.pdf" download>Download PDF</a></p>
       </div>
+      
     </div>
   );
 };

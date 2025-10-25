@@ -88,6 +88,10 @@ app.get("/dashboard", authenticate, async (req, res) => {
   res.json({ name: req.user.name });
 });
 
+// ------------------ ROUTES ------------------
+app.use("/sell", sellRoutes);
+
+
 // ------------------ START SERVER ------------------
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () =>

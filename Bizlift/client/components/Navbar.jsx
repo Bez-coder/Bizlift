@@ -74,7 +74,9 @@ const Navbar = () => {
               </ul>
             )}
           </li>
-
+          <li>
+            <Link to="/marketplace">Market</Link>
+          </li>
           <li>
             <Link to="/contactus">Contact Us</Link>
           </li>

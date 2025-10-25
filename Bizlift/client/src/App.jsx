@@ -12,6 +12,7 @@ import SellPage from "../user/sellpage.jsx";
 import GuidancePage from "../pages/GuidancePage.jsx";
 import BusinessRegistration from "../pages/BusinessRegistration.jsx";
 import Marketplace from "../components/MarketPlace.jsx";
+import MyGoodsPage from "../pages/MyGoodsPage.jsx";
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
           <Route path="/dashboard/guidance" element={<GuidancePage />} />
           <Route path="/guidance/business-registration" element={<BusinessRegistration />} />
           <Route path="/marketplace" element={<Marketplace />} />
+          <Route path="/dashboard/goods" element={<MyGoodsPage />} />
           
         </Routes>
     <Footer />

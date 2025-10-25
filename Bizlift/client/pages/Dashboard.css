@@ -44,6 +44,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
+  padding: 80px;
 }
 .logout-btn {
   background-color: #a8904f;

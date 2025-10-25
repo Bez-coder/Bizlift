@@ -105,12 +105,16 @@ const CashBook = () => {
       },
     ],
   };
+const handleLogout = () => {
+    localStorage.removeItem("token");
+    navigate("/login");
+  };
 
   return (
     <div className="cashbook-layout">
       <aside className="sidebar">
         <div className="logo">
-          <h2>BizLift</h2>
+          
         </div>
         <nav className="nav-links">
           <Link className={location.pathname === "/dashboard" ? "active" : ""} to="/dashboard">
@@ -128,6 +132,9 @@ const CashBook = () => {
           <Link className={location.pathname.includes("/sell") ? "active" : ""} to="/dashboard/sell">
             Sell
           </Link>
+          <button className="logout-btn" onClick={handleLogout}>
+            Logout
+          </button>
         </nav>
       </aside>
 

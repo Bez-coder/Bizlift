@@ -2,10 +2,11 @@
 .cashbook-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 40px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #fff;
   color: #0c2656;
+  
 }
 
 h1 {
@@ -20,6 +21,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+ 
 }
 
 /* Marketplace Table Section */
@@ -246,6 +248,7 @@ h1 {
 .cashbook-layout {
   display: flex;
   min-height: 100vh;
+  padding-top: 40px;
 }
 
 .sidebar {
